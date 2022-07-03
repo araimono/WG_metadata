@@ -1,24 +1,25 @@
 {
-        "name": "ukishima",
-        "description": "He is one of our Team Dev leaders.",
-        "image":"https://cdn.discordapp.com/avatars/488544515976724480/576357514d55dc5c1784c96c3c8281ab.png",
-        "authentications":[
-          {
-            "chain":"main",
-            "address":"0x00...",
-            "tokenId":"1"          
-          },
-          "contributions":[
-            {
-              "name":"Wagumi Contributor",
-              "descriotion":"Active contributor to our 5,000 Reach event.",
-              "image":""
-            },
-            {
-              "name":"Wagumi Contributor",
-              "descriotion":"Active contributor to our Working Group Of Token."
-              "image":""
-            },
-          ]
-        ]
+  "name": "ukishima",
+  "description": "He is one of our Team Dev leaders.",
+  "image": "https://cdn.discordapp.com/avatars/488544515976724480/576357514d55dc5c1784c96c3c8281ab.png",
+  "authentications": [
+    {
+      "chain": "main",
+      "address": "0x00...",
+      "tokenId": "1"
+    }
+  ],
+  "contributions": [
+    {
+      "name": "Wagumi Contributor",
+      "descriotion": "Active contributor to our 5,000 Reach event.",
+      "image": ""
+    },
+    {
+      "name": "Wagumi Contributor",
+      "descriotion": "Active contributor to our Working Group Of Token.",
+      "image": ""
+    }
+  ]
 }
+
