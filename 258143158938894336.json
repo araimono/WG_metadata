@@ -1,0 +1,20 @@
+{
+  "name": "ikisuke",
+  "description": "He is one of our Team Community leaders.",
+  "image": "https://cdn.discordapp.com/avatars/258143158938894336/4cb8ccaea1d91533a937986ac41f9453.png",
+  "properties": {
+    "contributions": [
+      {
+        "name": "Wagumi Roles",
+        "descriotion": "Team Dev Leader",
+        "image": "",
+        "properties": {
+          "date": {
+            "from": "04.2022",
+            "to": ""
+          }
+        }
+      }
+    ]
+  }
+}
