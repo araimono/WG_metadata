@@ -1,0 +1,32 @@
+[
+  {
+    "name": "IVS那覇に参加",
+    "image": "https://www.ivs.events/wp-content/uploads/2022/05/ivs-mv-2-1536x864.jpg",
+    "description": "IVS那覇に参加しました。",
+    "properties": {
+      "id": "6a3f4864-a090-4683-8b3e-a7d9c0bcb05b",
+      "date": {
+        "start": "2022-07-06",
+        "end": "2022-07-08"
+      },
+      "references": [
+        "https://wagumi-dev.notion.site/IVS-6a3f4864a09046838b3ea7d9c0bcb05b"
+      ]
+    }
+  },
+  {
+    "name": "IVS那覇で登壇",
+    "image": "https://media.discordapp.net/attachments/981208746103537744/994869469476298823/IMG_0444.jpg?width=331&height=442",
+    "description": "IVS那覇でセッションに登壇しました。",
+    "properties": {
+      "id": "1e888fc9-5871-41ab-9b22-4b9fb8906e70",
+      "date": {
+        "start": "2022-07-08",
+        "end": ""
+      },
+      "references": [
+        "https://www.ivs.events/"
+      ]
+    }
+  }
+]

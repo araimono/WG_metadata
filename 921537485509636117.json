@@ -1,0 +1,32 @@
+[
+  {
+    "name": "IVS那覇報告会に参加",
+    "image": "https://www.ivs.events/wp-content/uploads/2022/05/ivs-mv-2-1536x864.jpg",
+    "description": "IVS那覇報告会に参加しました。",
+    "properties": {
+      "id": "a533cbd0-bff8-495b-83a1-53ba39ad32bc",
+      "date": {
+        "start": "2022-07-14",
+        "end": ""
+      },
+      "references": [
+        "https://www.ivs.events/"
+      ]
+    }
+  },
+  {
+    "name": "IVS那覇に参加",
+    "image": "https://www.ivs.events/wp-content/uploads/2022/05/ivs-mv-2-1536x864.jpg",
+    "description": "IVS那覇に参加しました。",
+    "properties": {
+      "id": "6a3f4864-a090-4683-8b3e-a7d9c0bcb05b",
+      "date": {
+        "start": "2022-07-06",
+        "end": "2022-07-08"
+      },
+      "references": [
+        "https://wagumi-dev.notion.site/IVS-6a3f4864a09046838b3ea7d9c0bcb05b"
+      ]
+    }
+  }
+]
