@@ -1,0 +1,45 @@
+[
+  {
+    "name": "AMAモデレーターを務めました",
+    "image": "https://pbs.twimg.com/profile_images/1465762338871644162/nYSe4c4G_400x400.jpg",
+    "description": "「Fracton Ventures創業者に聞く、今後のWeb3トレンドと注目している領域」のモデレーターをつとめました。",
+    "properties": {
+      "id": "19ccad78-604e-4fa3-87c6-5de4c102e0e0",
+      "date": {
+        "start": "2022-07-16",
+        "end": ""
+      },
+      "references": []
+    }
+  },
+  {
+    "name": "WagumiDAO Adminとして活動",
+    "image": "https://pbs.twimg.com/profile_images/1465762338871644162/nYSe4c4G_400x400.jpg",
+    "description": "Adminとして活動しました。",
+    "properties": {
+      "id": "1e7078fc-1429-4ca9-b44b-acced5f927a8",
+      "date": {
+        "start": "2022-07-01",
+        "end": "2022-09-30"
+      },
+      "references": [
+        "https://wagumi-dev.notion.site/WagumiDAO-Admin-bc6d94fadb5d408ab3dc9f4b3943326e"
+      ]
+    }
+  },
+  {
+    "name": "IVS那覇に参加",
+    "image": "https://www.ivs.events/wp-content/uploads/2022/05/ivs-mv-2-1536x864.jpg",
+    "description": "IVS那覇に参加しました。",
+    "properties": {
+      "id": "6a3f4864-a090-4683-8b3e-a7d9c0bcb05b",
+      "date": {
+        "start": "2022-07-06",
+        "end": "2022-07-08"
+      },
+      "references": [
+        "https://wagumi-dev.notion.site/IVS-6a3f4864a09046838b3ea7d9c0bcb05b"
+      ]
+    }
+  }
+]
