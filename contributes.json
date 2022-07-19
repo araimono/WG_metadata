@@ -1,5 +1,5 @@
 {
-  "timestamp": "2022-07-19T00:14:48.849Z",
+  "timestamp": "2022-07-19T00:22:12.996Z",
   "contributes": [
     {
       "id": "f548d6a2-ba46-411e-bf0a-9aa8e918116a",
@@ -9,8 +9,7 @@
       "description": "和組Canon - Issue #13を配信しました",
       "date": {
         "start": "2022-07-19",
-        "end": null,
-        "time_zone": null
+        "end": ""
       },
       "users": [
         "779789414880510002",
@@ -29,8 +28,7 @@
       "description": "第4回定例ミーティングに参加しました。",
       "date": {
         "start": "2022-07-17",
-        "end": null,
-        "time_zone": null
+        "end": ""
       },
       "users": [
         "488389192775106561",
@@ -54,8 +52,7 @@
       "description": "「Fracton Ventures創業者に聞く、今後のWeb3トレンドと注目している領域」で質問を行い採用されました。",
       "date": {
         "start": "2022-07-16",
-        "end": null,
-        "time_zone": null
+        "end": ""
       },
       "users": [
         "686023579631878145",
@@ -71,8 +68,7 @@
       "description": "「Fracton Ventures創業者に聞く、今後のWeb3トレンドと注目している領域」のモデレーターをつとめました。",
       "date": {
         "start": "2022-07-16",
-        "end": null,
-        "time_zone": null
+        "end": ""
       },
       "users": [
         "852056349222371369",
@@ -88,8 +84,7 @@
       "description": "Team Communityの定例ミーティングに参加しました。",
       "date": {
         "start": "2022-07-15",
-        "end": null,
-        "time_zone": null
+        "end": ""
       },
       "users": [
         "686023579631878145",
@@ -109,8 +104,7 @@
       "description": "落選",
       "date": {
         "start": "2022-07-14",
-        "end": null,
-        "time_zone": null
+        "end": ""
       },
       "users": [
         "686023579631878145"
@@ -125,8 +119,7 @@
       "description": "当選",
       "date": {
         "start": "2022-07-13",
-        "end": null,
-        "time_zone": null
+        "end": ""
       },
       "users": [
         "258143158938894336"
@@ -141,8 +134,7 @@
       "description": "IVS那覇報告会に参加しました。",
       "date": {
         "start": "2022-07-14",
-        "end": null,
-        "time_zone": null
+        "end": ""
       },
       "users": [
         "686023579631878145",
@@ -182,8 +174,7 @@
       "description": "今後の活動イメージの共有作業を行いました。",
       "date": {
         "start": "2022-07-13",
-        "end": null,
-        "time_zone": null
+        "end": ""
       },
       "users": [
         "340699948620185602",
@@ -200,8 +191,7 @@
       "description": "WG 定例ミーティングの資料作成を行いました",
       "date": {
         "start": "2022-07-14",
-        "end": null,
-        "time_zone": null
+        "end": ""
       },
       "users": [
         "686023579631878145",
@@ -221,8 +211,7 @@
       "description": "リスニングオンリーで美女が話すのを楽しみました。",
       "date": {
         "start": "2022-07-13",
-        "end": null,
-        "time_zone": null
+        "end": ""
       },
       "users": [
         "488544515976724480",
@@ -238,8 +227,7 @@
       "description": "WG資料等の作成に関する打ち合わせを行いました。",
       "date": {
         "start": "2022-07-10",
-        "end": null,
-        "time_zone": null
+        "end": ""
       },
       "users": [
         "686023579631878145",
@@ -256,8 +244,7 @@
       "description": "積極的な投稿活動を行いました。",
       "date": {
         "start": "2022-06-01",
-        "end": "2022-06-30",
-        "time_zone": null
+        "end": "2022-06-30"
       },
       "users": [
         "488389192775106561"
@@ -272,8 +259,7 @@
       "description": "Adminとして活動しました。",
       "date": {
         "start": "2022-07-01",
-        "end": "2022-09-30",
-        "time_zone": null
+        "end": "2022-09-30"
       },
       "users": [
         "340699948620185602",
@@ -293,8 +279,7 @@
       "description": "Team Communityの定例ミーティングに参加しました。",
       "date": {
         "start": "2022-07-08",
-        "end": null,
-        "time_zone": null
+        "end": ""
       },
       "users": [
         "450293970493505536",
@@ -312,8 +297,7 @@
       "description": "Wagumi Catsの画像ファイルおよびメタデータの運用環境を変更する作業を行いました。",
       "date": {
         "start": "2022-05-09",
-        "end": "2022-07-03",
-        "time_zone": null
+        "end": "2022-07-03"
       },
       "users": [
         "488389192775106561",
@@ -330,8 +314,7 @@
       "description": "IVS那覇に参加しました。",
       "date": {
         "start": "2022-07-06",
-        "end": "2022-07-08",
-        "time_zone": null
+        "end": "2022-07-08"
       },
       "users": [
         "686023579631878145",
@@ -358,8 +341,7 @@
       "description": "WagumiDAOのリーダーを務めました。",
       "date": {
         "start": "2022-01-01",
-        "end": "2022-06-30",
-        "time_zone": null
+        "end": "2022-06-30"
       },
       "users": [
         "488389192775106561"
@@ -374,8 +356,7 @@
       "description": "IVS那覇でセッションに登壇しました。",
       "date": {
         "start": "2022-07-08",
-        "end": null,
-        "time_zone": null
+        "end": ""
       },
       "users": [
         "686023579631878145",
@@ -393,8 +374,7 @@
       "description": "WagumiDAOのリーダーを務めました。",
       "date": {
         "start": "2022-07-01",
-        "end": "2022-12-31",
-        "time_zone": null
+        "end": "2022-12-31"
       },
       "users": [
         "340699948620185602"
@@ -411,8 +391,7 @@
       "description": "Adminとして活動しました。",
       "date": {
         "start": "2022-04-01",
-        "end": "2022-06-30",
-        "time_zone": null
+        "end": "2022-06-30"
       },
       "users": [
         "488389192775106561",
@@ -432,8 +411,7 @@
       "description": "がんばりました。",
       "date": {
         "start": "2022-04-01",
-        "end": "2022-04-30",
-        "time_zone": null
+        "end": "2022-04-30"
       },
       "users": [
         "686023579631878145",
@@ -454,8 +432,7 @@
       "description": "地獄のような作業をおこなってくれました。",
       "date": {
         "start": "2022-06-01",
-        "end": "2022-09-30",
-        "time_zone": null
+        "end": "2022-09-30"
       },
       "users": [
         "488389192775106561",
