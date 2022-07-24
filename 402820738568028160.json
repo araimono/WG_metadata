@@ -1,15 +1,17 @@
 [
   {
-    "name": "WagumiDAO リーダーとして活動",
-    "image": "https://pbs.twimg.com/profile_images/1465762338871644162/nYSe4c4G_400x400.jpg",
-    "description": "WagumiDAOのリーダーを務めました",
+    "name": "News Letterを配信",
+    "image": "https://s3.amazonaws.com/revue/issue_images/images/000/553/488/original/issue_image_1247661.jpg?1658168732",
+    "description": "和組Canon - Issue #13を配信しました",
     "properties": {
-      "id": "df2e89b5-d960-4b09-955b-00cdf02048df",
+      "id": "f548d6a2-ba46-411e-bf0a-9aa8e918116a",
       "date": {
-        "start": "2022-01-01",
-        "end": "2022-06-30"
+        "start": "2022-07-19",
+        "end": ""
       },
-      "references": []
+      "references": [
+        "https://www.getrevue.co/profile/wagumidao/issues/canon-issue-13-1247661"
+      ]
     }
   },
   {
