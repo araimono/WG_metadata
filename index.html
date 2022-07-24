@@ -1,0 +1,143 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes"
+    />
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.7.4/dist/web3.min.js"></script>
+  </head>
+  <body>
+    <button id="enableButton">Connect Metamask</button>
+    <span id="account"></span><span id="chainId"></span>
+    <div id="log"></div>
+
+    <script>
+      const web3 = new Web3(Web3.givenProvider);
+      const contract = "0x4ee20e2feee2774f0c75478497afd9968a4ddb27";
+
+      let owner;
+      let userid;
+      let salt;
+      let signature;
+
+      async function mint() {
+        await window.ethereum.request({
+          method: "wallet_switchEthereumChain",
+          params: [{ chainId: "0x5" }],
+        });
+        const method = await web3.eth.abi.encodeFunctionSignature(
+          "mint(address,uint256,uint256,bytes)"
+        );
+        const data = await web3.eth.abi.encodeParameters(
+          ["address", "uint256", "uint256", "bytes"],
+          [owner, userid, salt, signature]
+        );
+        const gas = await web3.eth.estimateGas({
+          to: contract,
+          data: method + data.substr(2),
+        });
+        const baseFee = (await web3.eth.getBlock("pending")).baseFeePerGas;
+        logs("estimateGas:" + gas + " Fee:" + (Number(baseFee) + 1));
+        logs("rowdata:<pre>" + method + data.substr(2) + "</pre>");
+        const tx_data = {
+          from: await getAccount(),
+          to: contract,
+          data: method + data.substr(2),
+          gas: gas + 20000,
+        };
+        const response = await web3.eth
+          .sendTransaction(tx_data)
+          .once("transactionHash", function (hash) {
+            logs(
+              'Transaction Hash:<a href="https://goerli.etherscan.io/tx/' +
+                hash +
+                '" target="_blank" rel="noopener noreferrer">' +
+                hash +
+                "</a>"
+            );
+            logs("Minting:Please wait for about 30 seconds to a few minutes.");
+          });
+
+        if (typeof response !== "undefined") {
+          logs("gasUsed:" + response.gasUsed);
+          logs(
+            'Transaction Hash:<a href="https://goerli.etherscan.io/token/' +
+              contract +
+              "?a=" +
+              id +
+              '" target="_blank" rel="noopener noreferrer">TokenID: ' +
+              id +
+              "</a>"
+          );
+          logs("COPLETED:Mint");
+        }
+      }
+
+      async function getData() {
+        const url = new URL(window.location.href);
+        owner = url.searchParams.get("owner");
+        userid = url.searchParams.get("userid");
+        signature = url.searchParams.get("signature");
+        salt = url.searchParams.get("salt");
+        logs(`owner=${owner}`);
+        logs(`userid=${userid}`);
+        logs(`salt=${salt}`);
+        logs(`signature=${signature}`);
+        await mint();
+      }
+
+      async function connect() {
+        if (typeof window.ethereum === "undefined") {
+          document.getElementById("status").textContent =
+            "MetaMask is not installed!";
+        } else {
+          updateStatus();
+          getData();
+        }
+      }
+
+      async function updateStatus() {
+        document.getElementById("account").textContent = await getAccount();
+        document.getElementById("chainId").textContent = await getChainId();
+      }
+
+      async function getAccount() {
+        const accounts = await ethereum.request({
+          method: "eth_requestAccounts",
+        });
+        return accounts[0];
+      }
+
+      async function getChainId() {
+        const chainId =
+          " (ChainID: " +
+          (await ethereum.request({ method: "eth_chainId" })) +
+          ")";
+        return chainId;
+      }
+
+      function logs(log) {
+        document
+          .getElementById("log")
+          .insertAdjacentHTML("afterbegin", log + "</br>");
+      }
+
+      ethereum.on("accountsChanged", (accounts) => {
+        updateStatus();
+      });
+
+      ethereum.on("chainChanged", (chainId) => {
+        updateStatus();
+      });
+
+      const enableButton = document.getElementById("enableButton");
+      enableButton.addEventListener("click", async () => {
+        await connect();
+      });
+
+      connect();
+    </script>
+  </body>
+</html>

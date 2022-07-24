@@ -1,6 +1,24 @@
 {
-  "timestamp": "2022-07-19T16:01:41.365Z",
+  "timestamp": "2022-07-22T23:42:52.352Z",
   "contributes": {
+    "f548d6a2-ba46-411e-bf0a-9aa8e918116a": {
+      "name": "News Letterを配信",
+      "image": "https://s3.amazonaws.com/revue/issue_images/images/000/553/488/original/issue_image_1247661.jpg?1658168732",
+      "description": "和組Canon - Issue #13を配信しました",
+      "date": {
+        "start": "2022-07-19",
+        "end": ""
+      },
+      "references": [
+        "https://www.getrevue.co/profile/wagumidao/issues/canon-issue-13-1247661"
+      ],
+      "users": [
+        "779789414880510002",
+        "402820738568028160",
+        "918836683766661123"
+      ],
+      "last_edited_time": "2022-07-20T00:03:00.000Z"
+    },
     "df2e89b5-d960-4b09-955b-00cdf02048df": {
       "name": "WagumiDAO リーダーとして活動",
       "image": "https://pbs.twimg.com/profile_images/1465762338871644162/nYSe4c4G_400x400.jpg",
@@ -13,27 +31,36 @@
       "users": [
         "488389192775106561"
       ],
-      "last_edited_time": "2022-07-19T15:59:00.000Z"
+      "last_edited_time": "2022-07-19T23:37:00.000Z"
     },
-    "39399cf8-7cc6-4635-986b-920db846e250": {
-      "name": "5000人記念イベント 開催に尽力",
-      "image": "https://cdn.discordapp.com/attachments/914988919362293760/970922588064841778/unknown.png",
-      "description": "がんばりました。",
+    "1f091f56-aa4a-4d55-8498-8d28a3e63938": {
+      "name": "WG-TOKEN に参加",
+      "image": "https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4d09e9cc-0595-4e3b-bcff-66fd69dfe467/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220706%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220706T051403Z&X-Amz-Expires=86400&X-Amz-Signature=2de08251586942afb6616ee76c42416220a9fb57a2e3750cc42d537f6dcf4fce&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject",
+      "description": "地獄のような作業をおこなってくれました。",
       "date": {
-        "start": "2022-04-01",
-        "end": "2022-04-30"
+        "start": "2022-07-01",
+        "end": "2022-09-30"
       },
-      "references": [],
+      "references": [
+        "https://wagumi-dev.notion.site/WG-TOKEN-1f091f56aa4a4d5584988d28a3e63938"
+      ],
       "users": [
+        "488389192775106561",
+        "340699948620185602",
         "686023579631878145",
-        "390450654000316438",
         "258143158938894336",
-        "700246962016092160",
         "695157095846379562",
-        "450293970493505536",
+        "402820738568028160",
+        "496541494480601092",
+        "918836683766661123",
+        "489624124780576785",
+        "814473052204433428",
+        "407535019897126913",
+        "528886785204289556",
+        "783349189680824360",
         "488544515976724480"
       ],
-      "last_edited_time": "2022-07-19T16:01:00.000Z"
+      "last_edited_time": "2022-07-19T23:52:00.000Z"
     }
   }
 }
