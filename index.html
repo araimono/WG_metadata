@@ -15,7 +15,7 @@
 
     <script>
       const web3 = new Web3(Web3.givenProvider);
-      const contract = "0x4ee20e2feee2774f0c75478497afd9968a4ddb27";
+      const contract = "0x26ed22Dc557a33899A18E63A32ea23Feeebc0E37";
 
       let owner;
       let userid;
@@ -23,10 +23,7 @@
       let signature;
 
       async function mint() {
-        await window.ethereum.request({
-          method: "wallet_switchEthereumChain",
-          params: [{ chainId: "0x5" }],
-        });
+        await changeChain();
         const method = await web3.eth.abi.encodeFunctionSignature(
           "mint(address,uint256,uint256,bytes)"
         );
@@ -35,6 +32,7 @@
           [owner, userid, salt, signature]
         );
         const gas = await web3.eth.estimateGas({
+          from: await getAccount(),
           to: contract,
           data: method + data.substr(2),
         });
@@ -45,7 +43,8 @@
           from: await getAccount(),
           to: contract,
           data: method + data.substr(2),
-          gas: gas + 20000,
+          gas: Number(gas) + 10000,
+          maxPriorityFeePerGas: 1500000000
         };
         const response = await web3.eth
           .sendTransaction(tx_data)
@@ -62,15 +61,7 @@
 
         if (typeof response !== "undefined") {
           logs("gasUsed:" + response.gasUsed);
-          logs(
-            'Transaction Hash:<a href="https://goerli.etherscan.io/token/' +
-              contract +
-              "?a=" +
-              id +
-              '" target="_blank" rel="noopener noreferrer">TokenID: ' +
-              id +
-              "</a>"
-          );
+          console.log(response);
           logs("COPLETED:Mint");
         }
       }
