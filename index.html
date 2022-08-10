@@ -93,14 +93,22 @@
           document.getElementById("status").textContent =
             "MetaMask is not installed!";
         } else {
-          updateStatus();
-          getData();
+          await changeChain();
+          await updateStatus();
+          await getData();
         }
       }
 
       async function updateStatus() {
         document.getElementById("account").textContent = await getAccount();
         document.getElementById("chainId").textContent = await getChainId();
+      }
+
+      async function changeChain(){
+        await window.ethereum.request({
+          method: "wallet_switchEthereumChain",
+          params: [{ chainId: "0x5" }],
+        });
       }
 
       async function getAccount() {
