@@ -6,10 +6,10 @@
       name="viewport"
       content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes"
     />
-    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.7.4/dist/web3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.7.5/dist/web3.min.js"></script>
   </head>
   <body>
-    <button id="enableButton">Connect Metamask</button>
+    <button id="enableButton">Mint</button>
     <span id="account"></span><span id="chainId"></span>
     <div id="log"></div>
 
@@ -136,8 +136,6 @@
       enableButton.addEventListener("click", async () => {
         await connect();
       });
-
-      connect();
     </script>
   </body>
 </html>
