@@ -1,140 +1,56 @@
-<html>
+<html lang="ja">
   <head>
-    <meta charset="utf-8" />
-    <meta name="robots" content="noindex,nofollow" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>WagumiSBT - 発行</title>
+    <meta name="description" content="WagumiSBTを発行するページです" />
+    <!-- ogp start -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="発行" />
+    <meta property="og:description" content="WagumiSBTを発行するページです" />
+    <meta property="og:site_name" content="WagumiSBT" />
     <meta
-      name="viewport"
-      content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes"
+      property="og:image"
+      content="https://pbs.twimg.com/profile_images/1465762338871644162/nYSe4c4G_400x400.jpg"
     />
-    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.7.5/dist/web3.min.js"></script>
+    <!-- //ogp end -->
+    <link
+      rel="shortcut icon"
+      href="https://pbs.twimg.com/profile_images/1465762338871644162/nYSe4c4G_400x400.jpg"
+    />
+    <script
+      src="https://cdn.ethers.io/lib/ethers-5.7.umd.min.js"
+      type="application/javascript"
+    ></script>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <button id="enableButton">Mint</button>
-    <span id="account"></span><span id="chainId"></span>
-    <div id="log"></div>
+    <main id="wrapper" class="wrapper">
+      <!-- /mainvisual -->
+      <section id="contact-guide" class="contact-guide">
+        <div class="mainvisual__container mainvisual">
+          <div class="mainvisual__text-main">Wagumi SBT</div>
+        </div>
+        <div class="contact-guide__container">
+          <div class="contact-guide__heading-sub">ADDRESS</div>
+          <div class="contact-guide__message" id="address">
+            YOUR ADDRESS
+          </div>
+          <div class="contact-guide__heading-sub">USER NAME</div>
+          <div class="contact-guide__message" id="username">YOUR NAME</div>
+          <div class="contact-guide__heading-sub">USER ID (TOKEN ID)</div>
+          <div class="contact-guide__message" id="userid">YOUR USER ID</div>
 
-    <script>
-      const web3 = new Web3(Web3.givenProvider);
-      const contract = "0x26ed22Dc557a33899A18E63A32ea23Feeebc0E37";
+          <div class="contact-guide__list">
+            <div class="contact-guide__list-item">
+              <a class="contact-guide__button" id="mintButton">発行する</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-      let owner;
-      let userid;
-      let salt;
-      let signature;
-
-      async function mint() {
-        await changeChain();
-        const method = await web3.eth.abi.encodeFunctionSignature(
-          "mint(address,uint256,uint256,bytes)"
-        );
-        const data = await web3.eth.abi.encodeParameters(
-          ["address", "uint256", "uint256", "bytes"],
-          [owner, userid, salt, signature]
-        );
-        const gas = await web3.eth.estimateGas({
-          from: await getAccount(),
-          to: contract,
-          data: method + data.substr(2),
-        });
-        const baseFee = (await web3.eth.getBlock("pending")).baseFeePerGas;
-        logs("estimateGas:" + gas + " Fee:" + (Number(baseFee) + 1));
-        logs("rowdata:<pre>" + method + data.substr(2) + "</pre>");
-        const tx_data = {
-          from: await getAccount(),
-          to: contract,
-          data: method + data.substr(2),
-          gas: Number(gas) + 10000,
-          maxPriorityFeePerGas: 1500000000
-        };
-        const response = await web3.eth
-          .sendTransaction(tx_data)
-          .once("transactionHash", function (hash) {
-            logs(
-              'Transaction Hash:<a href="https://goerli.etherscan.io/tx/' +
-                hash +
-                '" target="_blank" rel="noopener noreferrer">' +
-                hash +
-                "</a>"
-            );
-            logs("Minting:Please wait for about 30 seconds to a few minutes.");
-          });
-
-        if (typeof response !== "undefined") {
-          logs("gasUsed:" + response.gasUsed);
-          console.log(response);
-          logs("COPLETED:Mint");
-        }
-      }
-
-      async function getData() {
-        const url = new URL(window.location.href);
-        owner = url.searchParams.get("owner");
-        userid = url.searchParams.get("userid");
-        signature = url.searchParams.get("signature");
-        salt = url.searchParams.get("salt");
-        logs(`owner=${owner}`);
-        logs(`userid=${userid}`);
-        logs(`salt=${salt}`);
-        logs(`signature=${signature}`);
-        await mint();
-      }
-
-      async function connect() {
-        if (typeof window.ethereum === "undefined") {
-          document.getElementById("status").textContent =
-            "MetaMask is not installed!";
-        } else {
-          await changeChain();
-          await updateStatus();
-          await getData();
-        }
-      }
-
-      async function updateStatus() {
-        document.getElementById("account").textContent = await getAccount();
-        document.getElementById("chainId").textContent = await getChainId();
-      }
-
-      async function changeChain(){
-        await window.ethereum.request({
-          method: "wallet_switchEthereumChain",
-          params: [{ chainId: "0x5" }],
-        });
-      }
-
-      async function getAccount() {
-        const accounts = await ethereum.request({
-          method: "eth_requestAccounts",
-        });
-        return accounts[0];
-      }
-
-      async function getChainId() {
-        const chainId =
-          " (ChainID: " +
-          (await ethereum.request({ method: "eth_chainId" })) +
-          ")";
-        return chainId;
-      }
-
-      function logs(log) {
-        document
-          .getElementById("log")
-          .insertAdjacentHTML("afterbegin", log + "</br>");
-      }
-
-      ethereum.on("accountsChanged", (accounts) => {
-        updateStatus();
-      });
-
-      ethereum.on("chainChanged", (chainId) => {
-        updateStatus();
-      });
-
-      const enableButton = document.getElementById("enableButton");
-      enableButton.addEventListener("click", async () => {
-        await connect();
-      });
-    </script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
