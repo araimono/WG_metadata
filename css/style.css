@@ -146,11 +146,11 @@ select {
   }
 }
 
-.contact-guide {
+.tx-guide {
   padding: 1.8rem 1.6rem;
 }
 
-.contact-guide__container {
+.tx-guide__container {
   box-shadow: 0 0 0.8rem 0 rgba(0, 0, 0, 0.15);
   max-width: 1140px;
   margin: 0 auto;
@@ -158,18 +158,18 @@ select {
   background: #f4f1ef;
 }
 
-.contact-guide__heading {
+.tx-guide__heading {
   margin: 0 0 4.8rem 0;
   text-align: center;
 }
 
-.contact-guide__heading-main {
+.tx-guide__heading-main {
   font-weight: 700;
   font-family: "Comfortaa", cursive;
   font-size: 4.8rem;
 }
 
-.contact-guide__heading-main:after {
+.tx-guide__heading-main:after {
   display: block;
   max-width: 300px;
   margin: 1.6rem auto 1.6rem auto;
@@ -177,14 +177,14 @@ select {
   content: "";
 }
 
-.contact-guide__heading-sub {
+.tx-guide__heading-sub {
   margin: 3.6rem 0 0 0;
   font-weight: 400;
   font-size: 1.4rem;
   text-align: center;
 }
 
-.contact-guide__message {
+.tx-guide__message {
   margin: 0.6rem auto;
   color: #0b006d;
   font-size: 1.8rem;
@@ -193,18 +193,18 @@ select {
   overflow-wrap: break-word;
 }
 
-.contact-guide__message:after {
+.tx-guide__message:after {
 	font-family: "Material Icons";
   margin:0rem 0.6rem;
 	content: "\e14d";
 }
 
-.contact-guide__list-item {
+.tx-guide__list-item {
   margin: 3.6rem 0 2.4rem 0;
   text-align: center;
 }
 
-.contact-guide__button {
+.tx-guide__button {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -226,6 +226,6 @@ select {
   color: #ffffff;
 }
 
-.contact-guide__button:hover {
+.tx-guide__button:hover {
   background: #088183;
 }
